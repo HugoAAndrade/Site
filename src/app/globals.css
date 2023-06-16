@@ -2,26 +2,80 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap");
+
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --bg-color: #161616;
+  --bg-section: #1a1a1a;
+  --p-color: #9a9a9a;
+  /* --primary: rgb(90, 87, 255); */
+  --primary: rgb(87, 115, 255);
+  /* --primary: #41C766; */
+  --p-small: 14px;
+  --p-medium: 16px;
+  --border: 1px solid #242424;
+  --transition: 0.4s ease-in-out 0s;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: var(--bg-color);
+  color: var(--p-color);
+  font-weight: 400;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+::-moz-selection {
+  color: #fff;
+  background: var(--primary);
+}
+
+::selection {
+  color: #fff;
+  background: var(--primary);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+main {
+  margin: 100px auto 20px;
+  background-image: url(../../public/bgDots.svg);
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: fadeIn 1s;
+}
+
+.slick-slide div {
+  border: none !important;
+  outline: none !important;
+}
+
+.slick-track img {
+  filter: saturate(0);
+  display: flex !important;
+  margin: 0 auto;
+  border: none !important;
+  outline: none !important;
+}
+
+#header.sticky {
+  height: 65px;
+  background-color: #161616df;
+  transition: height var(--transition);
 }

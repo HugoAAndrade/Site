@@ -1,0 +1,14 @@
+.footer {
+  background-color: var(--bg-color);
+
+  & > div {
+    margin: 0 auto;
+    display: flex;
+    max-width: 1280px;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+    font-size: var(--p-small);
+    border-top: var(--border);
+  }
+}

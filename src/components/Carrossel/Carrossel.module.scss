@@ -1,0 +1,10 @@
+.carrossel {
+  margin: 35px auto;
+
+  & > div {
+    background: var(--bg-color);
+    padding: 50px 0;
+    border-top: var(--border);
+    border-bottom: var(--border);
+  }
+}

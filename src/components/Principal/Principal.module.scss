@@ -1,0 +1,131 @@
+.principal {
+  padding: 80px 0;
+  & > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 750px;
+    margin: 0 auto;
+    gap: 12px;
+    text-align: center;
+
+    h1 {
+      font-size: 56px;
+      line-height: 64px;
+      overflow: hidden;
+      // background: linear-gradient(97.13deg, #e9e9e9 0%, #515151 100%);
+      // -webkit-background-clip: text;
+      // -webkit-text-fill-color: transparent;
+
+      span {
+        color: var(--primary);
+        // -webkit-text-fill-color: var(--primary);
+      }
+    }
+
+    div {
+      h2 {
+        margin: 25px auto 50px;
+        font-size: 32px;
+        line-height: 42px;
+      }
+
+      p {
+        margin: 20px auto;
+        text-align: left;
+        font-size: var(--p-medium);
+
+        &:first-child {
+          margin-top: 50px;
+        }
+
+        a {
+          color: var(--primary);
+          position: relative;
+
+          &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            height: 2px;
+            width: 100%;
+            background-color: var(--primary);
+            transform: scaleX(0);
+            transition: transform var(--transition);
+          }
+
+          &:hover {
+            &::after {
+              transform: scaleX(1);
+            }
+          }
+        }
+      }
+    }
+
+    & > a {
+      font-size: var(--p-medium);
+      margin-top: 20px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 200px;
+      height: 52px;
+      background: var(--bg-color);
+      border: var(--border);
+      border-radius: 2px;
+      border: var(--border);
+      position: relative;
+      z-index: 2;
+
+      svg {
+        opacity: 0;
+        position: relative;
+        left: 5px;
+        top: 1px;
+        fill: var(--p-color);
+        transition: var(--transition);
+      }
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 0px;
+        display: block;
+        z-index: -1;
+        transition: transform 0.4s ease-in-out 0s;
+      }
+
+      &::before {
+        border-left: 2px solid var(--primary);
+        border-right: 2px solid var(--primary);
+        transform: scaleY(0);
+      }
+
+      &::after {
+        border-top: 2px solid var(--primary);
+        border-bottom: 2px solid var(--primary);
+        transform: scaleX(0);
+      }
+
+      &:hover {
+        &::before {
+          transform: scaleY(1);
+        }
+        &::after {
+          transform: scaleX(1);
+        }
+
+        svg {
+          fill: var(--primary);
+          left: 10px;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

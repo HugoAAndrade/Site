@@ -1,0 +1,31 @@
+.social {
+  ul {
+    display: flex;
+    gap: 20px;
+
+    li {
+      cursor: pointer;
+      position: relative;
+
+      &:not(:last-child)::after {
+        content: "";
+        display: block;
+        height: 2px;
+        width: 2px;
+        background-color: var(--primary);
+        position: absolute;
+        right: -12px;
+        top: 10px;
+      }
+
+      a {
+        color: var(--p-color);
+        transition: var(--transition);
+
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}

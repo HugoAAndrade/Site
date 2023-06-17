@@ -43,7 +43,7 @@ const Header = ({ anchor }) => {
     <header id="header" className={styles.header}>
       <div>
         {anchor ? (
-          <Link href="#" onClick={scrollToTop}>
+          <Link href="/" onClick={scrollToTop}>
             <p>
               Hugo
               <br />

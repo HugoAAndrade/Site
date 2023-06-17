@@ -1,5 +1,6 @@
 .footer {
   background-color: var(--bg-color);
+  transition: background-color var(--transition);
 
   & > div {
     margin: 0 auto;

@@ -74,12 +74,13 @@
       justify-content: center;
       width: 200px;
       height: 52px;
-      background: var(--bg-color);
       border: var(--border);
       border-radius: 2px;
       border: var(--border);
       position: relative;
       z-index: 2;
+      background-color: var(--bg-section);
+      transition: background-color var(--transition);
 
       svg {
         opacity: 0;

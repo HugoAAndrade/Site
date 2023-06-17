@@ -25,7 +25,7 @@
         padding: 20px;
         height: 380px;
         text-align: left;
-        background: var(--bg-color);
+        background-color: var(--bg-section);
         border: var(--border);
         border-radius: 2px;
         align-items: flex-start;
@@ -33,6 +33,7 @@
         gap: 10px;
         position: relative;
         z-index: 2;
+        transition: background-color var(--transition);
 
         svg {
           fill: var(--p-color);

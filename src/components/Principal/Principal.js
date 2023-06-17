@@ -33,8 +33,7 @@ const Principal = ({ sobre }) => {
               Meu nome é <Link href="/">Hugo</Link>, sou um apaixonado por Front
               End e UI/UX design, com experiência na criação de interfaces
               intuitivas e atraentes. Meu objetivo é combinar habilidades
-              técnicas e criativas para desenvolver experiências digitais
-              excepcionais.
+              técnicas e criativas para desenvolver experiências digitais.
               <br /> Tenho conhecimento em algumas áreas da programação mas a
               área que mais me identifiquei e me especializei foi a de Front
               End.
@@ -49,7 +48,7 @@ const Principal = ({ sobre }) => {
               outros. */}
             </p>
             <p>
-              Sou formado em Análise e Desenvolvimento de Sistemas. Tenho
+              Sou formado em Análise e Desenvolvimento de Sislights. Tenho
               habilidades em JavaScript, React, Node, jQuery, SASS, Adobe
               Photoshop, Figma, entre outros.
             </p>

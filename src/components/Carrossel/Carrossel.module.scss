@@ -1,10 +1,17 @@
 .carrossel {
   margin: 35px auto;
+  transition: var(--transition);
 
   & > div {
-    background: var(--bg-color);
-    padding: 50px 0;
+    margin: 0 auto;
+    max-width: 2560px;
+    background-color: var(--bg-section);
     border-top: var(--border);
     border-bottom: var(--border);
+    transition: background-color var(--transition);
+
+    & > div > div {
+      padding: 50px 0 40px;
+    }
   }
 }

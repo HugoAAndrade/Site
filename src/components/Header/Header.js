@@ -1,13 +1,15 @@
 "use client";
 import styles from "./Header.module.scss";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Social from "@/components/Social/Social";
 
 const Header = ({ anchor }) => {
+  const [toggle, setToggle] = useState(false);
+
   useEffect(() => {
     window.onscroll = () => {
-      if (scroll >= window.scroll && window.scroll > 50) {
+      if (scroll >= window.scroll && window.scroll > 30) {
         document.getElementById("header").classList.add("sticky");
       } else {
         document.getElementById("header").classList.remove("sticky");
@@ -22,6 +24,19 @@ const Header = ({ anchor }) => {
       top: 0,
       behavior: "smooth",
     });
+  };
+
+  const handleToggle = () => {
+    const tema = localStorage.getItem("theme");
+    if (tema === "dark") {
+      document.documentElement.classList.replace("dark", "light");
+      localStorage.setItem("theme", "light");
+    } else {
+      document.documentElement.classList.replace("light", "dark");
+      localStorage.setItem("theme", "dark");
+    }
+
+    setToggle(!toggle);
   };
 
   return (
@@ -46,6 +61,8 @@ const Header = ({ anchor }) => {
         )}
 
         <Social />
+        <input onClick={handleToggle} type="checkbox" id="switch" />
+        <label htmlFor="switch">Toggle</label>
       </div>
     </header>
   );

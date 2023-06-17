@@ -23,7 +23,9 @@ const Social = () => {
           </a>
         </li>
         <li>
-          <a href="mailto:hugoalvesandrade@gmail.com">E-mail</a>
+          <a target="_blank" href="mailto:hugoalvesandrade@gmail.com">
+            E-mail
+          </a>
         </li>
       </ul>
     </div>

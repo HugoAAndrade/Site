@@ -4,17 +4,40 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap");
 
-:root {
+
+
+:root.dark {
   --bg-color: #161616;
-  --bg-section: #1a1a1a;
-  --p-color: #9a9a9a;
+  --bg-section: #161616;
+  --p-color: #bfbfbf;
+  --header: #161616d0;
   /* --primary: rgb(90, 87, 255); */
-  --primary: rgb(87, 115, 255);
+  --primary: #5773ff;
   /* --primary: #41C766; */
   --p-small: 14px;
   --p-medium: 16px;
   --border: 1px solid #242424;
   --transition: 0.4s ease-in-out 0s;
+  --light: 300;
+  --regular: 400;
+}
+
+:root.light {
+  --bg-color: #eee;
+  --bg-section: #eee;
+  --p-color: #727272;
+  --primary: #f2652a;
+  --header: #eeeeeed0;
+  --p-small: 14px;
+  --p-medium: 16px;
+  --border: 1px solid #ddd;
+  --transition: 0.4s ease-in-out 0s;
+  --light: 300;
+  --regular: 400;
+}
+
+a {
+  transition: var(--transition) !important;
 }
 
 html {
@@ -27,6 +50,7 @@ body {
   font-weight: 400;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  transition: background-color var(--transition);
 }
 
 ::-moz-selection {
@@ -36,6 +60,21 @@ body {
 
 ::selection {
   color: #fff;
+  background: var(--primary);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
   background: var(--primary);
 }
 
@@ -52,13 +91,32 @@ body {
 }
 
 main {
-  margin: 100px auto 20px;
+  margin: 80px auto 20px;
   background-image: url(../../public/bgDots.svg);
   background-attachment: fixed;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   animation: fadeIn 1s;
+  position: relative;
+}
+
+main::before {
+  pointer-events: none;
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-image: url(../../public/bgDots.svg);
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: invert(1);
+  -webkit-filter: invert(1);
 }
 
 .slick-slide div {
@@ -76,6 +134,6 @@ main {
 
 #header.sticky {
   height: 65px;
-  background-color: #161616df;
-  transition: height var(--transition);
+  background-color: var(--header);
+  transition: var(--transition);
 }

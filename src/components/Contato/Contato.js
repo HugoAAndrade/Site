@@ -11,14 +11,13 @@ const Contato = () => {
   return (
     <section className={styles.contato}>
       <div>
-        <h1 data-aos="fade" data-aos-duration="1500" data-aos-offset="200">
+        <h1 data-aos="fade" data-aos-duration="1000">
           Me conte sobre seu
           <br /> próximo projeto.
         </h1>
         <a
           data-aos="fade"
-          data-aos-duration="2500"
-          data-aos-offset="0"
+          data-aos-duration="1500"
           href="mailto:hugoalvesandrade@gmail.com"
         >
           <p>Entre em contato</p>

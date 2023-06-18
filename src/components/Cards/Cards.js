@@ -6,7 +6,7 @@ import styles from "./Cards.module.scss";
 
 const Cards = () => {
   useEffect(() => {
-    Aos.init({ delay: 25, once: true, easing: "ease-in-out", offset: 300 });
+    Aos.init({ delay: 25, once: true, easing: "ease-in-out" });
   }, []);
 
   return (

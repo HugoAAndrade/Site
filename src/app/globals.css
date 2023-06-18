@@ -4,8 +4,6 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap");
 
-
-
 :root.dark {
   --bg-color: #161616;
   --bg-section: #161616;
@@ -29,7 +27,8 @@
   --bg-color: #eee;
   --bg-section: #eee;
   --p-color: #727272;
-  --primary: #f2652a;
+  /* --primary: #f2652a; */
+  --primary: #f22a5c;
   --header: #eeeeeed0;
   --p-small: 14px;
   --p-medium: 16px;

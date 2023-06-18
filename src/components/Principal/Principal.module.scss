@@ -9,6 +9,10 @@
     gap: 12px;
     text-align: center;
 
+    @media (max-width: 1400px) {
+      padding: var(--padding);
+    }
+
     h1 {
       font-size: 56px;
       line-height: 64px;
@@ -16,6 +20,15 @@
       // background: linear-gradient(97.13deg, #e9e9e9 0%, #515151 100%);
       // -webkit-background-clip: text;
       // -webkit-text-fill-color: transparent;
+      transition: var(--transition);
+
+      @media (max-width: 768px) {
+        line-height: normal;
+        font-size: 52px;
+      }
+      @media (max-width: 480px) {
+        font-size: 44px;
+      }
 
       span {
         color: var(--primary);
@@ -28,6 +41,10 @@
         margin: 25px auto 50px;
         font-size: 32px;
         line-height: 42px;
+
+        @media (max-width: 768px) {
+          font-size: 26px;
+        }
       }
 
       p {

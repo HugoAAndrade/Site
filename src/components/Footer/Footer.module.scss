@@ -3,7 +3,6 @@
   transition: background-color var(--transition);
 
   & > div {
-    margin: 0 auto;
     display: flex;
     max-width: 1280px;
     justify-content: space-between;
@@ -11,5 +10,11 @@
     height: 75px;
     font-size: var(--p-small);
     border-top: var(--border);
+    gap: 20px;
+    margin: 0 auto;
+
+    @media (max-width: 1400px) {
+      margin: var(--margin);
+    }
   }
 }

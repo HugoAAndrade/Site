@@ -11,9 +11,41 @@ const Carrossel = () => {
     infinite: true,
     speed: 500,
     slidesToShow: 10,
-    slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
+    swipeToSlide: true,
+    responsive: [
+      {
+        breakpoint: 1800,
+        settings: {
+          slidesToShow: 8,
+        },
+      },
+      {
+        breakpoint: 1400,
+        settings: {
+          slidesToShow: 6,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 5,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+    ],
   };
   return (
     <section className={styles.carrossel}>

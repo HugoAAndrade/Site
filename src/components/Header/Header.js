@@ -27,13 +27,10 @@ const Header = ({ anchor }) => {
   };
 
   const handleToggle = () => {
-    const tema = localStorage.getItem("theme");
-    if (tema === "dark") {
+    if (document.documentElement.classList.contains("dark")) {
       document.documentElement.classList.replace("dark", "light");
-      localStorage.setItem("theme", "light");
     } else {
       document.documentElement.classList.replace("light", "dark");
-      localStorage.setItem("theme", "dark");
     }
 
     setToggle(!toggle);
@@ -44,6 +41,17 @@ const Header = ({ anchor }) => {
       <div>
         {anchor ? (
           <Link href="/" onClick={scrollToTop}>
+            <svg
+              width="28"
+              height="35"
+              viewBox="0 0 28 35"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M4.5 0H0V35H4.5V19.5H23V35H27.5V0H23V15.5H4.5V0Z" />
+              <path d="M24 25H3V29H24V25Z" />
+              <path d="M0 35V15.5H27.5V35H23V19.5H4.5V35H0Z" />
+            </svg>
             <p>
               Hugo
               <br />
@@ -52,6 +60,18 @@ const Header = ({ anchor }) => {
           </Link>
         ) : (
           <Link href="/">
+            <svg
+              width="28"
+              height="35"
+              viewBox="0 0 28 35"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M4.5 0H0V35H4.5V19.5H23V35H27.5V0H23V15.5H4.5V0Z" />
+              <path d="M24 25H3V29H24V25Z" />
+              <path d="M0 35V15.5H27.5V35H23V19.5H4.5V35H0Z" />
+            </svg>
+
             <p>
               Hugo
               <br />

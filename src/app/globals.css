@@ -17,9 +17,12 @@
   --p-small: 14px;
   --p-medium: 16px;
   --border: 1px solid #242424;
-  --transition: 0.4s ease-in-out 0s;
+  --transition: 0.3s ease-in-out 0s;
   --light: 300;
   --regular: 400;
+  --logo: #fff;
+  --margin: 0 5%;
+  --padding: 0 5%;
 }
 
 :root.light {
@@ -31,14 +34,17 @@
   --p-small: 14px;
   --p-medium: 16px;
   --border: 1px solid #ddd;
-  --transition: 0.4s ease-in-out 0s;
+  --transition: 0.3s ease-in-out 0s;
   --light: 300;
   --regular: 400;
+  --logo: #727272;
+  --margin: 0 5%;
+  --padding: 0 5%;
 }
 
-a {
+/* a {
   transition: var(--transition) !important;
-}
+} */
 
 html {
   scroll-behavior: smooth;

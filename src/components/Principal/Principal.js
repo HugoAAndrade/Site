@@ -48,13 +48,13 @@ const Principal = ({ sobre }) => {
               outros. */}
             </p>
             <p>
-              Sou formado em Análise e Desenvolvimento de Sislights. Tenho
+              Sou formado em Análise e Desenvolvimento de Sistemas. Tenho
               habilidades em JavaScript, React, Node, jQuery, SASS, Adobe
               Photoshop, Figma, entre outros.
             </p>
             <p>
               Ao longo dos anos, desenvolvi diversos sites e ecommerces e atuei
-              como Front-End em projetos de larga escala.
+              como Front End em projetos de larga escala.
               <br /> Pela empresa{" "}
               <a target="_blank" href="https://www.hubsell.com.br/">
                 <span>Hubsell</span>
@@ -66,7 +66,7 @@ const Principal = ({ sobre }) => {
             <p>
               Estou sempre em busca de me aperfeiçoar como profissional,
               participando cursos, eventos e workshops. Tentando sempre
-              aprimorar minhas hard-skills e soft-skills.
+              aprimorar minhas hard skills e soft skills.
             </p>
           </div>
         )}

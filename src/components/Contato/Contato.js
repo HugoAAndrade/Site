@@ -6,7 +6,7 @@ import styles from "./Contato.module.scss";
 
 const Contato = () => {
   useEffect(() => {
-    Aos.init({ delay: 25, once: true, easing: "ease-in-out" });
+    Aos.init();
   }, []);
   return (
     <section className={styles.contato}>

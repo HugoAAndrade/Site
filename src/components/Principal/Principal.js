@@ -1,3 +1,4 @@
+import Head from "next/head";
 import styles from "./Principal.module.scss";
 import Link from "next/link";
 
@@ -28,6 +29,7 @@ const Principal = ({ sobre }) => {
           </Link>
         ) : (
           <div>
+            <title>Sobre mim | Hugo Andrade - Front End & UI/UX Designer</title>
             <h2>Sobre mim</h2>
             <p>
               Meu nome é <Link href="/">Hugo</Link>, sou um apaixonado por Front

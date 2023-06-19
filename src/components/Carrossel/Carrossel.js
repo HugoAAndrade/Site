@@ -30,18 +30,21 @@ const Carrossel = () => {
       {
         breakpoint: 1024,
         settings: {
+          autoplaySpeed: 2500,
           slidesToShow: 5,
         },
       },
       {
         breakpoint: 768,
         settings: {
+          autoplaySpeed: 2500,
           slidesToShow: 4,
         },
       },
       {
         breakpoint: 480,
         settings: {
+          autoplaySpeed: 2000,
           slidesToShow: 3,
         },
       },

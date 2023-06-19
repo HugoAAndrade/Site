@@ -1,4 +1,3 @@
-import Head from "next/head";
 import styles from "./Principal.module.scss";
 import Link from "next/link";
 

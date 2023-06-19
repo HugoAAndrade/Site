@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap");
-
 :root.dark {
   --bg-color: #161616;
   --bg-section: #161616;
@@ -50,6 +48,7 @@ html {
 }
 
 body {
+  font-family: 'Outfit', sans-serif;
   background-color: var(--bg-color);
   color: var(--p-color);
   font-weight: 400;

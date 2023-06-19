@@ -113,10 +113,12 @@ main::before {
   left: 50%;
   transform: translateX(-50%);
   min-width: 1920px;
+  opacity: 0.2;
 }
 
 html.light body main::before {
-  background-image: url(../../public/bgDots2.svg);
+  filter: invert(1);
+  opacity: 0.3;
 }
 
 .slick-slide div {

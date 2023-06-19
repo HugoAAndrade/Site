@@ -47,10 +47,6 @@ html {
   scroll-behavior: smooth;
 }
 
-html.light body main {
-  background-image: url(../../public/bgDots2.svg);
-}
-
 body {
   background-color: var(--bg-color);
   color: var(--p-color);
@@ -99,12 +95,24 @@ body {
 
 main {
   margin: 60px auto 20px;
+  animation: fadeIn 1s;
+  position: relative;
+}
+
+main::before {
+  content: '';
+  width: 100%;
+  height: 100%;
   background-image: url(../../public/bgDots.svg);
-  background-attachment: fixed;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  animation: fadeIn 1s;
+  z-index: -1;
+  position: fixed;
+}
+
+html.light body main::before {
+  background-image: url(../../public/bgDots2.svg);
 }
 
 .slick-slide div {

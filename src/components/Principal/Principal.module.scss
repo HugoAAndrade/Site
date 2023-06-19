@@ -8,9 +8,13 @@
     margin: 25px auto 0;
     gap: 12px;
     text-align: center;
+    transition: var(--transition);
 
     @media (max-width: 1400px) {
       padding: var(--padding);
+    }
+    @media (max-width: 768px) {
+      margin-top: 0px;
     }
 
     img {

@@ -5,9 +5,7 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div>
-        <a>
-          <p>Hugo Andrade © 2023 - present. Todos os direitos reservados.</p>
-        </a>
+        <p>Hugo Andrade © 2023 - present. Todos os direitos reservados.</p>
         <Social />
       </div>
     </footer>

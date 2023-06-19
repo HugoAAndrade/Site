@@ -6,7 +6,7 @@ const Principal = ({ sobre }) => {
     <section className={styles.principal}>
       <div>
         <figure>
-          <img src="images/me.webp" />
+          <img src="images/me.webp" alt="logo" />
         </figure>
         <p>Olá! 👋</p>
         <h1>

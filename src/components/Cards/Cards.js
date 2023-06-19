@@ -44,7 +44,7 @@ const Cards = () => {
               <path d="M24.2672 9.74841H8.03906V11.3109H24.2672V9.74841Z" />
               <path d="M5.74296 8.74847H3.73163V10.311H5.74296V8.74847Z" />
             </svg>
-            <h4>UI & UX</h4>
+            <h3>UI & UX</h3>
             <p>
               Construindo uma combinação entre UX e UI que resulta em
               experiências excepcionais, onde a usabilidade se encontra com o
@@ -93,7 +93,7 @@ const Cards = () => {
               <path d="M33.7508 13.0546L32.3943 12.2791L31.2325 14.3113L32.5889 15.0868L33.7508 13.0546Z" />
               <path d="M29.9331 11.2415L28.4235 10.8401L27.8212 13.1059L29.3308 13.5072L29.9331 11.2415Z" />
             </svg>
-            <h4>Design & Criatividade</h4>
+            <h3>Design & Criatividade</h3>
             <p>
               Fazendo o uso de uma disciplina que envolve o uso da criatividade
               para resolver problemas e criar soluções visualmente atraentes.
@@ -121,7 +121,7 @@ const Cards = () => {
               <path d="M30.6418 30.5305L29.6653 29.3106L34.959 25.0727L29.6653 20.8356L30.6418 19.6157L37.4594 25.0727L30.6418 30.5305Z" />
               <path d="M28.1273 17.7164L26.6259 17.2839L22.2637 32.4271L23.7651 32.8596L28.1273 17.7164Z" />
             </svg>
-            <h4>Desenvolvimento</h4>
+            <h3>Desenvolvimento</h3>
             <p>
               Utilizando ferramentas como HTML, CSS, JavaScript, React, entre
               outros para construir interfaces responsivas e otimizadas para a
@@ -154,7 +154,7 @@ const Cards = () => {
                 </clipPath>
               </defs>
             </svg>
-            <h4>Web & Mobile</h4>
+            <h3>Web & Mobile</h3>
             <p>
               Construção de aplicativos e sites que funcionem perfeitamente em
               diferentes plataformas e dispositivos. Oferecendo uma experiência

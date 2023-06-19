@@ -52,37 +52,37 @@ const Carrossel = () => {
       <div>
         <Slider {...settings}>
           <div>
-            <img src="images/figma.svg" />
+            <img src="images/figma.svg" alt="figma" />
           </div>
           <div>
-            <img src="images/ps.svg" />
+            <img src="images/ps.svg" alt="photoshop" />
           </div>
           <div>
-            <img src="images/html.svg" />
+            <img src="images/html.svg" alt="html" />
           </div>
           <div>
-            <img src="images/css.svg" />
+            <img src="images/css.svg" alt="css" />
           </div>
           <div>
-            <img src="images/sass.svg" />
+            <img src="images/sass.svg" alt="sass" />
           </div>
           <div>
-            <img src="images/js.svg" />
+            <img src="images/js.svg" alt="javascript" />
           </div>
           <div>
-            <img src="images/ts.svg" />
+            <img src="images/ts.svg" alt="typescript" />
           </div>
           <div>
-            <img style={{ height: 64 }} src="images/react.svg" />
+            <img style={{ height: 64 }} src="images/react.svg" alt="react" />
           </div>
           <div>
-            <img style={{ height: 68 }} src="images/node.svg" />
+            <img style={{ height: 68 }} src="images/node.svg" alt="node" />
           </div>
           <div>
-            <img style={{ height: 68 }} src="images/git.svg" />
+            <img style={{ height: 68 }} src="images/git.svg" alt="git" />
           </div>
           <div>
-            <img src="images/wp.svg" />
+            <img src="images/wp.svg" alt="wordpress" />
           </div>
         </Slider>
       </div>

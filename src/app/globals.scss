@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  &.dark {
+    --bg-color: #161616;
+    --bg-section: #161616;
+    --p-color: #bfbfbf;
+    --p-color: #cccccc;
+    --header: #161616d0;
+    /* --primary: rgb(90, 87, 255); */
+    --primary: #5773ff;
+    /* --primary: #41C766; */
+    --p-small: 14px;
+    --p-medium: 16px;
+    --border: 1px solid #242424;
+    --transition: 0.3s ease-in-out 0s;
+    --light: 300;
+    --regular: 400;
+    --logo: #fff;
+    --margin: 0 5%;
+    --padding: 0 5%;
+  }
+
+  &.light {
+    --bg-color: #eee;
+    --bg-section: #eee;
+    --p-color: #727272;
+    /* --primary: #f2652a; */
+    --primary: #f22a5c;
+    --header: #eeeeeed0;
+    --p-small: 14px;
+    --p-medium: 16px;
+    --border: 1px solid #ddd;
+    --transition: 0.3s ease-in-out 0s;
+    --light: 300;
+    --regular: 400;
+    --logo: #727272;
+    --margin: 0 5%;
+    --padding: 0 5%;
+  }
+}
+
+/* a {
+  transition: var(--transition) !important;
+} */
+
+html {
+  scroll-behavior: smooth;
+
+  ::-moz-selection {
+    color: #fff;
+    background: var(--primary);
+  }
+
+  ::selection {
+    color: #fff;
+    background: var(--primary);
+  }
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--primary);
+  }
+
+  &.light main {
+    background: radial-gradient(#00000015 1px, transparent 1px);
+    background-size: 30px 30px;
+    background-position: center center;
+    background-attachment: fixed;
+
+    /* &.light main {
+    background-image: url(../../public/bgDots2.svg);
+    } */
+  }
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--p-color);
+  font-weight: 400;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  transition: background-color var(--transition);
+
+  #header.sticky {
+    height: 65px;
+    background-color: var(--header);
+    transition: var(--transition);
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+
+  main {
+    margin: 80px auto 20px;
+    animation: fadeIn 1s;
+    background: radial-gradient(#ffffff15 1px, transparent 1px);
+    background-size: 30px 30px;
+    background-position: center center;
+    background-attachment: fixed;
+
+    .slick-slide div {
+      border: none !important;
+      outline: none !important;
+    }
+
+    .slick-track img {
+      filter: saturate(0);
+      display: flex !important;
+      margin: 0 auto;
+      border: none !important;
+      outline: none !important;
+    }
+  }
+
+  /* main {
+  margin: 100px auto 20px;
+  animation: fadeIn 1s;
+  background-image: url(../../public/bgDots.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+}

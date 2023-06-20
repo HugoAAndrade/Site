@@ -83,6 +83,10 @@ html {
     /* &.light main {
     background-image: url(../../public/bgDots2.svg);
     } */
+
+    @media screen and (max-width: 768px) {
+      background-size: 25px 25px;
+    }
   }
 }
 
@@ -119,6 +123,10 @@ body {
     background-size: 30px 30px;
     background-position: center center;
     background-attachment: fixed;
+
+    @media screen and (max-width: 768px) {
+      background-size: 25px 25px;
+    }
 
     .slick-slide div {
       border: none !important;

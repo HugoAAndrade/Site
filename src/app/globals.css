@@ -109,6 +109,7 @@ html.light main {
 
 main {
   margin: 80px auto 20px;
+  animation: fadeIn 1s;
   background: radial-gradient(#ffffff20 5%, transparent 0);
   background-size: 30px 30px;
   background-position: center center;

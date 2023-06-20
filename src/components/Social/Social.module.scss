@@ -19,7 +19,7 @@
         right: -12px;
         top: 10px;
 
-        @media (max-width: 768px) {
+        @media screen and (max-width: 768px) {
           top: 15px;
         }
       }
@@ -36,7 +36,7 @@
           display: none;
         }
 
-        @media (max-width: 768px) {
+        @media screen and (max-width: 768px) {
           font-size: 0px;
 
           svg {

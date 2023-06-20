@@ -4,7 +4,7 @@
   padding: 120px 0 100px;
   margin: 0 auto;
 
-  @media (max-width: 1400px) {
+  @media screen and (max-width: 1400px) {
     margin: var(--margin);
   }
   div {
@@ -25,11 +25,11 @@
       // -webkit-text-fill-color: transparent;
       transition: var(--transition);
 
-      @media (max-width: 768px) {
+      @media screen and (max-width: 768px) {
         line-height: normal;
         font-size: 52px;
       }
-      @media (max-width: 480px) {
+      @media screen and (max-width: 480px) {
         font-size: 44px;
       }
 

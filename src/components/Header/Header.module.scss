@@ -17,7 +17,7 @@
     font-size: var(--p-small);
     border-bottom: var(--border);
 
-    @media (max-width: 1400px) {
+    @media screen and (max-width: 1400px) {
       margin: var(--margin);
     }
 
@@ -52,7 +52,7 @@
     user-select: none;
     color: transparent;
     cursor: pointer;
-    width: 38px;
+    width: 42px;
     height: 14px;
     background: var(--primary);
     display: block;
@@ -61,6 +61,10 @@
     transform: rotate(90deg);
     right: -10px;
     transition: width var(--transition);
+
+    @media screen and (max-width: 768px) {
+      width: 38px;
+    }
   }
 
   label:after {
@@ -68,11 +72,15 @@
     position: absolute;
     top: 4px;
     left: 6px;
-    width: 12px;
+    width: 14px;
     height: 6px;
     background: #eee;
     border-radius: 100px;
     transition: 0.3s;
+
+    @media screen and (max-width: 768px) {
+      width: 12px;
+    }
   }
 
   input:checked + label {

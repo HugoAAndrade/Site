@@ -94,7 +94,7 @@ body {
   }
 }
 
-main {
+/* main {
   margin: 100px auto 20px;
   animation: fadeIn 1s;
   background-image: url(../../public/bgDots.svg);
@@ -105,6 +105,21 @@ main {
 
 html.light main {
   background-image: url(../../public/bgDots2.svg);
+} */
+
+main {
+  margin: 80px auto 20px;
+  background: radial-gradient(#ffffff20 5%, transparent 0);
+  background-size: 30px 30px;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+html.light main {
+  background: radial-gradient(#00000020 5%, transparent 0);
+  background-size: 30px 30px;
+  background-position: center center;
+  background-attachment: fixed;
 }
 
 .slick-slide div {

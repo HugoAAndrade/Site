@@ -14,7 +14,7 @@
     h2 {
       font-size: 32px;
       line-height: 42px;
-      transition: var(--transition);
+      transition: font-size var(--transition);
 
       @media screen and (max-width: 768px) {
         line-height: normal;

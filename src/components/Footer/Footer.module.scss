@@ -16,5 +16,9 @@
     @media screen and (max-width: 1400px) {
       margin: var(--margin);
     }
+
+    & > p {
+      padding: 25px 0;
+    }    
   }
 }

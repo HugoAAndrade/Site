@@ -28,11 +28,12 @@ const Header = ({ anchor }) => {
 
   const handleToggle = () => {
     if (document.documentElement.classList.contains("dark")) {
-      document.documentElement.classList.replace("dark", "light");
+    document.documentElement.classList.remove("dark");
+    document.documentElement.classList.add("light");
     } else {
-      document.documentElement.classList.replace("light", "dark");
+      document.documentElement.classList.remove("light");
+      document.documentElement.classList.add("dark");
     }
-
     setToggle(!toggle);
   };
 

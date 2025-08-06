@@ -125,7 +125,6 @@ const Cards = () => {
             <p>
               Experiência sólida em desenvolvimento web com foco em e-commerces e soluções completas usando PHP,
               Node.js, Docker, Linux, MySQL e JavaScript.
-              Atuação em projetos robustos com Magento, WordPress e WooCommerce.
             </p>
           </div>
           <div data-aos="fade-down" data-aos-duration="2500">

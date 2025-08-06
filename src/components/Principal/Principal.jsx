@@ -11,7 +11,7 @@ const Principal = ({ sobre }) => {
         <p>Olá! 👋</p>
         <h1>
           Construindo sua
-          <br /> experiência digital, <span>Front End</span> &{" "}
+          <br /> experiência digital, <span>Full Stack</span> &{" "}
           <span>UI/UX Designer</span>
         </h1>
         {!sobre ? (
@@ -30,43 +30,54 @@ const Principal = ({ sobre }) => {
           <div>
             <h2>Sobre mim</h2>
             <p>
-              Meu nome é <Link href="/">Hugo</Link>, sou um apaixonado por Front
-              End e UI/UX design, com experiência na criação de interfaces
-              intuitivas e atraentes. Meu objetivo é combinar habilidades
-              técnicas e criativas para desenvolver experiências digitais.
-              <br /> Tenho conhecimento em algumas áreas da programação mas a
-              área que mais me identifiquei e me especializei foi a de Front
-              End.
+              Meu nome é <Link href="/">Hugo</Link>, sou um desenvolvedor Full
+              Stack com forte atuação em Front End e UI/UX design. Tenho
+              experiência na criação de interfaces modernas, intuitivas e
+              performáticas, além de sistemas robustos no back-end.
             </p>
             <p>
-              Como sempre tive afinidade com design isso sempre me auxiliou na
-              minha carreira como desenvolvedor Front End, sempre utilizo as
-              melhores práticas de programação atreladas ao máximo de cuidado ao
-              layout.
-              {/* Sempre atento as interfaces, wireframes, prototipagem,
-              desenvolvimento responsivo, otimização de desempenho, entre
-              outros. */}
+              Ao longo da minha trajetória, fui ampliando meus conhecimentos em
+              diversas tecnologias, e atualmente trabalho com PHP, Node.js,
+              Docker, servidores Linux e e-commerces utilizando Magento,
+              WooCommerce e WordPress.
             </p>
             <p>
-              Sou formado em Análise e Desenvolvimento de Sistemas. Tenho
-              habilidades em JavaScript, React, Node, jQuery, SASS, Adobe
-              Photoshop, Figma, entre outros.
+              Minha base em design sempre me ajudou a entregar projetos com alto
+              padrão visual, mantendo boas práticas de desenvolvimento aliadas à
+              atenção aos detalhes e à responsividade.
             </p>
             <p>
-              Ao longo dos anos, desenvolvi diversos sites e ecommerces e atuei
-              como Front End em projetos de larga escala.
-              <br /> Pela empresa{" "}
-              <a target="_blank" href="https://www.hubsell.com.br/">
+              Atualmente atuo como desenvolvedor na{" "}
+              <a
+                target="_blank"
+                href="https://widecommerce.com.br/"
+                rel="noopener noreferrer"
+              >
+                <span>WideCommerce</span>
+              </a>
+              , onde participo de projetos com foco em e-commerce nas
+              plataformas Magento e WordPress. Entre os clientes atendidos estão
+              marcas como Dumond, Kikos, Lightning Bolt, Catálogo Favorita,
+              Redelease, Shopping Eldorado, DetonaShop e diversos outros.
+            </p>
+            <p>
+              Sou formado em Análise e Desenvolvimento de Sistemas e sigo em
+              constante evolução, estudando novas tecnologias, participando de
+              eventos e sempre buscando melhorar minhas hard e soft skills.
+            </p>
+            <p>
+              Já desenvolvi diversos sites e e-commerces, participando de
+              projetos de grande porte. Pela empresa{" "}
+              <a
+                target="_blank"
+                href="https://www.hubsell.com.br/"
+                rel="noopener noreferrer"
+              >
                 <span>Hubsell</span>
               </a>{" "}
-              desenvolvi diversos projetos e templates. Além disso possuo
-              experiência com projetos de freelance e pessoais.
-            </p>
-
-            <p>
-              Estou sempre em busca de me aperfeiçoar como profissional,
-              participando cursos, eventos e workshops. Tentando sempre
-              aprimorar minhas hard skills e soft skills.
+              também tive a oportunidade de criar soluções personalizadas para
+              diferentes nichos. Além disso, atuo com projetos pessoais e
+              freelances.
             </p>
           </div>
         )}

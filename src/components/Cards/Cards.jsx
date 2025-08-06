@@ -121,11 +121,11 @@ const Cards = () => {
               <path d="M30.6418 30.5305L29.6653 29.3106L34.959 25.0727L29.6653 20.8356L30.6418 19.6157L37.4594 25.0727L30.6418 30.5305Z" />
               <path d="M28.1273 17.7164L26.6259 17.2839L22.2637 32.4271L23.7651 32.8596L28.1273 17.7164Z" />
             </svg>
-            <h3>Desenvolvimento</h3>
+            <h3>Desenvolvimento Full Stack</h3>
             <p>
-              Utilizando ferramentas como HTML, CSS, JavaScript, React, entre
-              outros para construir interfaces responsivas e otimizadas para a
-              web.
+              Experiência sólida em desenvolvimento web com foco em e-commerces e soluções completas usando PHP,
+              Node.js, Docker, Linux, MySQL e JavaScript.
+              Atuação em projetos robustos com Magento, WordPress e WooCommerce.
             </p>
           </div>
           <div data-aos="fade-down" data-aos-duration="2500">

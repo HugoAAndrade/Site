@@ -33,7 +33,7 @@ const Principal = ({ sobre }) => {
               Meu nome é <Link href="/">Hugo</Link>, sou um desenvolvedor Full
               Stack com forte atuação em Front End e UI/UX design. Tenho
               experiência na criação de interfaces modernas, intuitivas e
-              performáticas, além de sistemas robustos no back-end.
+              performáticas, além de sistemas robustos no Back End.
             </p>
             <p>
               Ao longo da minha trajetória, fui ampliando meus conhecimentos em

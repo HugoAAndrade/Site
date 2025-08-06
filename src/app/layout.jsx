@@ -12,7 +12,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="pt-br" className="dark">
+    <html lang="pt-br" className="light">
       <body className={outfit.className}>
         {children}
         <Analytics />

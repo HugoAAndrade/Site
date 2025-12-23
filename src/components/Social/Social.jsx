@@ -28,7 +28,7 @@ const Social = () => {
         </li> */}
         <li>
           <a target="_blank" href="https://wa.me/5511954661530">
-            Whatsapp
+            WhatsApp
             <svg
               width="28"
               height="28"

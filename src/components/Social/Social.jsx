@@ -71,7 +71,7 @@ const Social = () => {
         </li>
         <li>
           <a target="_blank" href="https://github.com/HugoAAndrade">
-            Github
+            GitHub
             <svg
               width="32"
               height="32"

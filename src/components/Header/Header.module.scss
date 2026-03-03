@@ -92,6 +92,13 @@
     transform: translateX(-100%);
   }
 
+  // Evita o "pulo" no carregamento: aplica a posição do knob
+  // com base no tema já setado no <html> antes da hidratação.
+  :global(html.dark) & label:after {
+    left: calc(100% - 6px);
+    transform: translateX(-100%);
+  }
+
   label:active:after {
     width: 5px;
   }

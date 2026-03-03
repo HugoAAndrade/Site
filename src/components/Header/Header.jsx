@@ -7,6 +7,11 @@ import Social from "@/components/Social/Social";
 const Header = ({ anchor }) => {
   const [toggle, setToggle] = useState(false);
 
+  const applyThemeClass = (theme) => {
+    document.documentElement.classList.remove("dark", "light");
+    document.documentElement.classList.add(theme);
+  };
+
   useEffect(() => {
     window.onscroll = () => {
       if (scroll >= window.scroll && window.scroll > 30) {
@@ -19,6 +24,21 @@ const Header = ({ anchor }) => {
     };
   }, []);
 
+  useEffect(() => {
+    try {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark" || savedTheme === "light") {
+        applyThemeClass(savedTheme);
+        setToggle(savedTheme === "dark");
+        return;
+      }
+    } catch {
+      // Sem acesso ao localStorage
+    }
+
+    setToggle(document.documentElement.classList.contains("dark"));
+  }, []);
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -26,15 +46,18 @@ const Header = ({ anchor }) => {
     });
   };
 
-  const handleToggle = () => {
-    if (document.documentElement.classList.contains("dark")) {
-    document.documentElement.classList.remove("dark");
-    document.documentElement.classList.add("light");
-    } else {
-      document.documentElement.classList.remove("light");
-      document.documentElement.classList.add("dark");
+  const handleToggle = (event) => {
+    const isDark = event.target.checked;
+    const nextTheme = isDark ? "dark" : "light";
+
+    applyThemeClass(nextTheme);
+    setToggle(isDark);
+
+    try {
+      localStorage.setItem("theme", nextTheme);
+    } catch {
+      // Sem acesso ao localStorage
     }
-    setToggle(!toggle);
   };
 
   return (
@@ -82,7 +105,12 @@ const Header = ({ anchor }) => {
         )}
 
         <Social />
-        <input onClick={handleToggle} type="checkbox" id="switch" />
+        <input
+          onChange={handleToggle}
+          checked={toggle}
+          type="checkbox"
+          id="switch"
+        />
         <label htmlFor="switch">Toggle</label>
       </div>
     </header>

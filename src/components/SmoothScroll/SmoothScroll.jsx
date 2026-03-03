@@ -8,7 +8,7 @@ export default function SmoothScroll() {
     const lenis = new Lenis({
       smoothWheel: true,
       smoothTouch: false,
-      lerp: 0.07,
+      lerp: 0.1,
     });
 
     let rafId = 0;

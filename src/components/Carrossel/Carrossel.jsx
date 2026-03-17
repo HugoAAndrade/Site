@@ -1,93 +1,90 @@
 "use client";
+import { useEffect, useMemo, useRef, useState } from "react";
 import styles from "./Carrossel.module.scss";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
 
 const Carrossel = () => {
-  const settings = {
-    dots: false,
-    arrows: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 10,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    swipeToSlide: true,
-    responsive: [
-      {
-        breakpoint: 1800,
-        settings: {
-          slidesToShow: 8,
-        },
-      },
-      {
-        breakpoint: 1400,
-        settings: {
-          slidesToShow: 6,
-        },
-      },
-      {
-        breakpoint: 1024,
-        settings: {
-          autoplaySpeed: 2500,
-          slidesToShow: 5,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          autoplaySpeed: 2500,
-          slidesToShow: 4,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          autoplaySpeed: 2000,
-          slidesToShow: 3,
-        },
-      },
+  const skills = useMemo(
+    () => [
+      { src: "/images/figma.svg", alt: "Figma" },
+      { src: "/images/ps.svg", alt: "Photoshop" },
+      { src: "/images/html.svg", alt: "HTML" },
+      { src: "/images/css.svg", alt: "CSS" },
+      { src: "/images/sass.svg", alt: "Sass" },
+      { src: "/images/js.svg", alt: "JavaScript" },
+      { src: "/images/ts.svg", alt: "TypeScript" },
+      { src: "/images/react.svg", alt: "React" },
+      { src: "/images/node.svg", alt: "Node.js" },
+      { src: "/images/git.svg", alt: "Git" },
+      { src: "/images/wp.svg", alt: "WordPress" },
+      { src: "/images/php.svg", alt: "PHP" },
+      { src: "/images/sql.svg", alt: "SQL" },
+      { src: "/images/docker.svg", alt: "Docker" },
+      { src: "/images/linux.svg", alt: "Linux" },
+      { src: "/images/magento.svg", alt: "Magento" },
     ],
-  };
+    [],
+  );
+
+  const marqueeRef = useRef(null);
+  const groupRef = useRef(null);
+  const [repeatCount, setRepeatCount] = useState(2);
+  const [shiftPx, setShiftPx] = useState(0);
+
+  useEffect(() => {
+    const update = () => {
+      const marqueeEl = marqueeRef.current;
+      const groupEl = groupRef.current;
+
+      if (!marqueeEl || !groupEl) return;
+
+      const containerWidth = marqueeEl.clientWidth;
+      const sequenceWidth = groupEl.scrollWidth;
+
+      if (!containerWidth || !sequenceWidth) return;
+
+      setShiftPx(sequenceWidth);
+
+      // Repete o suficiente para nunca “abrir buraco” durante o loop.
+      const required = Math.ceil((containerWidth * 2) / sequenceWidth) + 1;
+      setRepeatCount(Math.max(2, required));
+    };
+
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
+
   return (
     <section className={styles.carrossel}>
       <div>
-        <Slider {...settings}>
-          <div>
-            <img src="images/figma.svg" alt="figma" />
+        <div className={styles.marquee} ref={marqueeRef}>
+          <div
+            className={styles.marqueeContent}
+            style={{ "--shift": `${shiftPx}px` }}
+          >
+            {Array.from({ length: repeatCount }).map((_, groupIndex) => (
+              <div
+                className={styles.group}
+                key={`group-${groupIndex}`}
+                ref={groupIndex === 0 ? groupRef : undefined}
+                aria-label={groupIndex === 0 ? "Skills" : undefined}
+                aria-hidden={groupIndex === 0 ? undefined : true}
+              >
+                {skills.map((skill) => (
+                  <div
+                    className={styles.item}
+                    key={`${groupIndex}-${skill.alt}`}
+                  >
+                    <img
+                      src={skill.src}
+                      alt={groupIndex === 0 ? skill.alt : ""}
+                    />
+                  </div>
+                ))}
+              </div>
+            ))}
           </div>
-          <div>
-            <img src="images/ps.svg" alt="photoshop" />
-          </div>
-          <div>
-            <img src="images/html.svg" alt="html" />
-          </div>
-          <div>
-            <img src="images/css.svg" alt="css" />
-          </div>
-          <div>
-            <img src="images/sass.svg" alt="sass" />
-          </div>
-          <div>
-            <img src="images/js.svg" alt="javascript" />
-          </div>
-          <div>
-            <img src="images/ts.svg" alt="typescript" />
-          </div>
-          <div>
-            <img style={{ height: 64 }} src="images/react.svg" alt="react" />
-          </div>
-          <div>
-            <img style={{ height: 68 }} src="images/node.svg" alt="node" />
-          </div>
-          <div>
-            <img style={{ height: 68 }} src="images/git.svg" alt="git" />
-          </div>
-          <div>
-            <img src="images/wp.svg" alt="wordpress" />
-          </div>
-        </Slider>
+        </div>
       </div>
     </section>
   );

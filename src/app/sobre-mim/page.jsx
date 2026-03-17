@@ -4,8 +4,8 @@ import Principal from "@/components/Principal/Principal";
 import Contato from "@/components/Contato/Contato";
 
 export const metadata = {
-  title: "Sobre mim | Hugo Andrade - Front End & UI/UX Designer",
-  description: "Front End & UI/UX Designer",
+  title: "Sobre mim | Hugo Andrade - Full Stack e Infraestrutura",
+  description: "Desenvolvedor Full Stack com foco em infraestrutura, automação e deploy.",
 };
 
 export default function Sobre() {

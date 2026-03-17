@@ -6,9 +6,9 @@ import SmoothScroll from "@/components/SmoothScroll/SmoothScroll";
 const outfit = Outfit({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Hugo Andrade - Desenvolvedor Full Stack & UI/UX Designer",
+  title: "Hugo Andrade - Full Stack | Infraestrutura, Deploy e DevOps",
   description:
-    "Desenvolvedor Full Stack com experiência em PHP, Node, Docker, Linux, Magento, WooCommerce e WordPress. Especialista em UI/UX e interfaces modernas.",
+    "Desenvolvedor Full Stack com experiência em PHP, Node.js, JavaScript e MySQL, com foco em infraestrutura, automação e deploy. Atuação com Docker e Linux em ambientes containerizados, além de e-commerce (Magento, WordPress e WooCommerce).",
 };
 
 export default function RootLayout({ children }) {

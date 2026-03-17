@@ -10,9 +10,8 @@ const Principal = ({ sobre }) => {
         </figure>
         <p>Olá! 👋</p>
         <h1>
-          Construindo sua
-          <br /> experiência digital, <span>Full Stack</span> &{" "}
-          <span>UI/UX Designer</span>
+          Engenharia <span>Full Stack</span>
+          <br /> com foco em <span>infraestrutura</span> e confiabilidade.
         </h1>
         {!sobre ? (
           <Link href="/sobre-mim">
@@ -29,23 +28,45 @@ const Principal = ({ sobre }) => {
         ) : (
           <div>
             <h2>Sobre mim</h2>
+
             <p>
-              Meu nome é <Link href="/">Hugo</Link>, sou um desenvolvedor Full
-              Stack com forte atuação em Front End e UI/UX design. Tenho
-              experiência na criação de interfaces modernas, intuitivas e
-              performáticas, além de sistemas robustos no Back End.
+              Meu nome é <Link href="/">Hugo</Link>, sou desenvolvedor Full
+              Stack e atuo na criação de aplicações web que equilibram boa
+              experiência do usuário, qualidade de código e infraestrutura bem
+              estruturada. Ao longo da minha trajetória, desenvolvi tanto o lado
+              visual das aplicações quanto a parte técnica responsável pelo
+              funcionamento e operação dos sistemas.
             </p>
+
             <p>
-              Ao longo da minha trajetória, fui ampliando meus conhecimentos em
-              diversas tecnologias, e atualmente trabalho com PHP, Node.js,
-              Docker, servidores Linux e e-commerces utilizando Magento,
-              WooCommerce e WordPress.
+              Tenho experiência no desenvolvimento de interfaces modernas,
+              intuitivas e responsivas, sempre buscando unir boas práticas de
+              UI/UX com desempenho e organização do código. Essa base em design
+              me ajuda a pensar nas aplicações não apenas do ponto de vista
+              técnico, mas também na experiência real de quem utiliza o sistema.
             </p>
+
             <p>
-              Minha base em design sempre me ajudou a entregar projetos com alto
-              padrão visual, mantendo boas práticas de desenvolvimento aliadas à
-              atenção aos detalhes e à responsividade.
+              No lado de engenharia, trabalho com tecnologias do ecossistema web
+              como PHP, Node.js e bancos de dados, participando da construção de
+              sistemas robustos e integrações entre diferentes plataformas.
             </p>
+
+            <p>
+              Também tenho forte interesse por infraestrutura e operação de
+              aplicações, trabalhando com Docker, servidores Linux e ambientes
+              containerizados. Essa experiência me permite atuar não apenas no
+              desenvolvimento das aplicações, mas também na organização dos
+              ambientes de execução, deploy e manutenção dos sistemas.
+            </p>
+
+            <p>
+              Grande parte da minha experiência está ligada ao desenvolvimento
+              de e-commerces e plataformas digitais, principalmente utilizando
+              Magento, WooCommerce e WordPress, participando tanto da
+              implementação quanto da manutenção e evolução dessas soluções.
+            </p>
+
             <p>
               Atualmente atuo como desenvolvedor na{" "}
               <a
@@ -55,29 +76,33 @@ const Principal = ({ sobre }) => {
               >
                 <span>WideCommerce</span>
               </a>
-              , onde participo de projetos com foco em e-commerce nas
-              plataformas Magento e WordPress. Entre os clientes atendidos estão
-              marcas como Dumond, Kikos, Lightning Bolt, Catálogo Favorita,
-              Redelease, Shopping Eldorado, DetonaShop e diversos outros.
+              , participando de projetos voltados para e-commerce e plataformas
+              digitais. Entre os clientes atendidos estão marcas como Dumond,
+              Kikos, Lightning Bolt, Catálogo Favorita, Redelease, Shopping
+              Eldorado, DetonaShop e diversos outros.
             </p>
+
             <p>
               Sou formado em Análise e Desenvolvimento de Sistemas e sigo em
-              constante evolução, estudando novas tecnologias, participando de
-              eventos e sempre buscando melhorar minhas hard e soft skills.
+              constante evolução profissional, estudando novas tecnologias
+              relacionadas a desenvolvimento, arquitetura de software,
+              infraestrutura e automação de ambientes.
             </p>
+
             <p>
-              Já desenvolvi diversos sites e e-commerces, participando de
-              projetos de grande porte. Pela empresa{" "}
+              Ao longo da minha carreira também participei de diversos projetos
+              de sites e e-commerces, incluindo soluções personalizadas
+              desenvolvidas pela{" "}
               <a
                 target="_blank"
                 href="https://www.hubsell.com.br/"
                 rel="noopener noreferrer"
               >
                 <span>Hubsell</span>
-              </a>{" "}
-              também tive a oportunidade de criar soluções personalizadas para
-              diferentes nichos. Além disso, atuo com projetos pessoais e
-              freelances.
+              </a>
+              . Além do trabalho profissional, também desenvolvo projetos
+              pessoais e estudos voltados a novas tecnologias e melhorias na
+              forma de construir e operar aplicações web.
             </p>
           </div>
         )}

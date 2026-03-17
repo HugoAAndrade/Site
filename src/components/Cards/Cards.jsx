@@ -20,40 +20,6 @@ const Cards = () => {
           <div data-aos="fade-down" data-aos-duration="1000">
             <svg
               width="50"
-              height="47"
-              viewBox="0 0 50 47"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M50 46.4523H0V5.71014H50V46.4523ZM1.5625 44.8898H48.4375V7.27264H1.5625V44.8898Z" />
-              <path d="M44.7312 14.7316V24.025H5.26913V14.7316H44.7312ZM46.2683 13.1937H3.73163V25.5621H46.2683V13.1937Z" />
-              <path d="M14.898 29.3785V33.2109H5.26913V29.3785H14.898ZM16.4355 27.8406H3.73163V34.7484H16.4355V27.8406Z" />
-              <path d="M16.4355 36.6582H3.73163V38.2207H16.4355V36.6582Z" />
-              <path d="M16.4355 40.5859H3.73163V42.1484H16.4355V40.5859Z" />
-              <path d="M31.352 36.6582H18.6484V38.2207H31.352V36.6582Z" />
-              <path d="M34.8836 18.5363H15.1164V20.0988H34.8836V18.5363Z" />
-              <path d="M31.352 40.5859H18.6484V42.1484H31.352V40.5859Z" />
-              <path d="M46.2683 36.6582H33.5648V38.2207H46.2683V36.6582Z" />
-              <path d="M46.2683 40.5859H33.5648V42.1484H46.2683V40.5859Z" />
-              <path d="M29.8145 29.3785V33.2109H20.1859V29.3785H29.8145ZM31.3523 27.8406H18.6484V34.7484H31.352L31.3523 27.8406Z" />
-              <path d="M44.7312 29.3785V33.2109H35.1023V29.3785H44.7312ZM46.2683 27.8406H33.5648V34.7484H46.2683V27.8406Z" />
-              <path d="M50 7.27266H0V0H50V7.27266ZM1.5625 5.71016H48.4375V1.5625H1.5625V5.71016Z" />
-              <path d="M4.8324 1.81372H2.99451V3.37622H4.8324V1.81372Z" />
-              <path d="M8.016 1.81372H6.17694V3.37622H8.016V1.81372Z" />
-              <path d="M11.1981 2.81366H9.35901V4.37616H11.1981V2.81366Z" />
-              <path d="M24.2672 9.74841H8.03906V11.3109H24.2672V9.74841Z" />
-              <path d="M5.74296 8.74847H3.73163V10.311H5.74296V8.74847Z" />
-            </svg>
-            <h3>UI & UX</h3>
-            <p>
-              Construindo uma combinação entre UX e UI que resulta em
-              experiências excepcionais, onde a usabilidade se encontra com o
-              design.
-            </p>
-          </div>
-          <div data-aos="fade-down" data-aos-duration="1500">
-            <svg
-              width="50"
               height="50"
               viewBox="0 0 50 50"
               fill="none"
@@ -93,10 +59,44 @@ const Cards = () => {
               <path d="M33.7508 13.0546L32.3943 12.2791L31.2325 14.3113L32.5889 15.0868L33.7508 13.0546Z" />
               <path d="M29.9331 11.2415L28.4235 10.8401L27.8212 13.1059L29.3308 13.5072L29.9331 11.2415Z" />
             </svg>
-            <h3>Design & Criatividade</h3>
+            <h3>Deploy & Automação</h3>
             <p>
-              Fazendo o uso de uma disciplina que envolve o uso da criatividade
-              para resolver problemas e criar soluções visualmente atraentes.
+              Automatização de deploys, rotinas de entrega e padronização de
+              ambientes para reduzir atrito entre desenvolvimento e produção.
+            </p>
+          </div>
+          <div data-aos="fade-down" data-aos-duration="1500">
+            <svg
+              width="50"
+              height="47"
+              viewBox="0 0 50 47"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M50 46.4523H0V5.71014H50V46.4523ZM1.5625 44.8898H48.4375V7.27264H1.5625V44.8898Z" />
+              <path d="M44.7312 14.7316V24.025H5.26913V14.7316H44.7312ZM46.2683 13.1937H3.73163V25.5621H46.2683V13.1937Z" />
+              <path d="M14.898 29.3785V33.2109H5.26913V29.3785H14.898ZM16.4355 27.8406H3.73163V34.7484H16.4355V27.8406Z" />
+              <path d="M16.4355 36.6582H3.73163V38.2207H16.4355V36.6582Z" />
+              <path d="M16.4355 40.5859H3.73163V42.1484H16.4355V40.5859Z" />
+              <path d="M31.352 36.6582H18.6484V38.2207H31.352V36.6582Z" />
+              <path d="M34.8836 18.5363H15.1164V20.0988H34.8836V18.5363Z" />
+              <path d="M31.352 40.5859H18.6484V42.1484H31.352V40.5859Z" />
+              <path d="M46.2683 36.6582H33.5648V38.2207H46.2683V36.6582Z" />
+              <path d="M46.2683 40.5859H33.5648V42.1484H46.2683V40.5859Z" />
+              <path d="M29.8145 29.3785V33.2109H20.1859V29.3785H29.8145ZM31.3523 27.8406H18.6484V34.7484H31.352L31.3523 27.8406Z" />
+              <path d="M44.7312 29.3785V33.2109H35.1023V29.3785H44.7312ZM46.2683 27.8406H33.5648V34.7484H46.2683V27.8406Z" />
+              <path d="M50 7.27266H0V0H50V7.27266ZM1.5625 5.71016H48.4375V1.5625H1.5625V5.71016Z" />
+              <path d="M4.8324 1.81372H2.99451V3.37622H4.8324V1.81372Z" />
+              <path d="M8.016 1.81372H6.17694V3.37622H8.016V1.81372Z" />
+              <path d="M11.1981 2.81366H9.35901V4.37616H11.1981V2.81366Z" />
+              <path d="M24.2672 9.74841H8.03906V11.3109H24.2672V9.74841Z" />
+              <path d="M5.74296 8.74847H3.73163V10.311H5.74296V8.74847Z" />
+            </svg>
+            <h3>Infra & Containers</h3>
+            <p>
+              Uso prático de Docker e Linux para criar ambientes reproduzíveis,
+              isolar serviços e executar aplicações otimizadas e com
+              consistência.
             </p>
           </div>
           <div data-aos="fade-down" data-aos-duration="2000">
@@ -123,8 +123,9 @@ const Cards = () => {
             </svg>
             <h3>Desenvolvimento Full Stack</h3>
             <p>
-              Experiência sólida em desenvolvimento web com foco em e-commerces e soluções completas usando PHP,
-              Node.js, Docker, Linux, MySQL e JavaScript.
+              Experiência sólida em desenvolvimento web com foco em e-commerces
+              e soluções completas usando PHP, Node.js, Docker, Linux, MySQL e
+              JavaScript.
             </p>
           </div>
           <div data-aos="fade-down" data-aos-duration="2500">

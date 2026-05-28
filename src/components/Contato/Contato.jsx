@@ -3,8 +3,10 @@ import "aos/dist/aos.css";
 import Aos from "aos";
 import { useEffect } from "react";
 import styles from "./Contato.module.scss";
+import { useLang } from "@/context/LanguageContext";
 
 const Contato = () => {
+  const { t } = useLang();
   useEffect(() => {
     Aos.init();
   }, []);
@@ -12,15 +14,15 @@ const Contato = () => {
     <section className={styles.contato}>
       <div>
         <h1 data-aos="fade" data-aos-duration="1000">
-          Me conte sobre seu
-          <br /> próximo projeto.
+          {t.contato.line1}
+          <br /> {t.contato.line2}
         </h1>
         <a
           data-aos="fade"
           data-aos-duration="1500"
           href="mailto:hugoalvesandrade@gmail.com"
         >
-          <p>Entre em contato</p>
+          <p>{t.contato.btn}</p>
           <svg
             width="16"
             height="16"

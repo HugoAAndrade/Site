@@ -3,8 +3,13 @@ import "aos/dist/aos.css";
 import Aos from "aos";
 import { useEffect } from "react";
 import styles from "./Cards.module.scss";
+import { useLang } from "@/context/LanguageContext";
 
 const Cards = () => {
+  const { t } = useLang();
+  const ch = t.cards.heading;
+  const items = t.cards.items;
+
   useEffect(() => {
     Aos.init({ delay: 25, once: true, easing: "ease-in-out" });
   }, []);
@@ -13,8 +18,11 @@ const Cards = () => {
     <section className={styles.cards}>
       <div>
         <h2>
-          Criando produtos digitais de forma
-          <br /> <span>moderna</span> e de <span>alta qualidade</span>.
+          {ch.before}
+          <br /> <span>{ch.span1}</span>
+          {ch.mid}
+          <span>{ch.span2}</span>
+          {ch.after}
         </h2>
         <div>
           <div data-aos="fade-down" data-aos-duration="1000">
@@ -59,11 +67,8 @@ const Cards = () => {
               <path d="M33.7508 13.0546L32.3943 12.2791L31.2325 14.3113L32.5889 15.0868L33.7508 13.0546Z" />
               <path d="M29.9331 11.2415L28.4235 10.8401L27.8212 13.1059L29.3308 13.5072L29.9331 11.2415Z" />
             </svg>
-            <h3>Deploy & Automação</h3>
-            <p>
-              Automatização de deploys, rotinas de entrega e padronização de
-              ambientes para reduzir atrito entre desenvolvimento e produção.
-            </p>
+            <h3>{items[0].title}</h3>
+            <p>{items[0].desc}</p>
           </div>
           <div data-aos="fade-down" data-aos-duration="1500">
             <svg
@@ -92,12 +97,8 @@ const Cards = () => {
               <path d="M24.2672 9.74841H8.03906V11.3109H24.2672V9.74841Z" />
               <path d="M5.74296 8.74847H3.73163V10.311H5.74296V8.74847Z" />
             </svg>
-            <h3>Infra & Containers</h3>
-            <p>
-              Uso prático de Docker e Linux para criar ambientes reproduzíveis,
-              isolar serviços e executar aplicações otimizadas e com
-              consistência.
-            </p>
+            <h3>{items[1].title}</h3>
+            <p>{items[1].desc}</p>
           </div>
           <div data-aos="fade-down" data-aos-duration="2000">
             <svg
@@ -121,12 +122,8 @@ const Cards = () => {
               <path d="M30.6418 30.5305L29.6653 29.3106L34.959 25.0727L29.6653 20.8356L30.6418 19.6157L37.4594 25.0727L30.6418 30.5305Z" />
               <path d="M28.1273 17.7164L26.6259 17.2839L22.2637 32.4271L23.7651 32.8596L28.1273 17.7164Z" />
             </svg>
-            <h3>Desenvolvimento Full Stack</h3>
-            <p>
-              Experiência sólida em desenvolvimento web com foco em e-commerces
-              e soluções completas usando PHP, Node.js, Docker, Linux, MySQL e
-              JavaScript.
-            </p>
+            <h3>{items[2].title}</h3>
+            <p>{items[2].desc}</p>
           </div>
           <div data-aos="fade-down" data-aos-duration="2500">
             <svg
@@ -154,12 +151,8 @@ const Cards = () => {
                 </clipPath>
               </defs>
             </svg>
-            <h3>Web & Mobile</h3>
-            <p>
-              Construção de aplicativos e sites que funcionem perfeitamente em
-              diferentes plataformas e dispositivos. Oferecendo uma experiência
-              perfeita aos usuários.
-            </p>
+            <h3>{items[3].title}</h3>
+            <p>{items[3].desc}</p>
           </div>
         </div>
       </div>

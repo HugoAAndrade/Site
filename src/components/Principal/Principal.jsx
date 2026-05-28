@@ -1,22 +1,33 @@
+"use client";
 import styles from "./Principal.module.scss";
 import Link from "next/link";
+import { useLang } from "@/context/LanguageContext";
 
 const Principal = ({ sobre }) => {
+  const { t } = useLang();
+  const h1 = t.hero.h1;
+  const bio = t.bio;
+
   return (
     <section className={styles.principal}>
       <div>
         <figure>
           <img src="images/me.webp" alt="logo" />
         </figure>
-        <p>Olá! 👋</p>
+        <p>{t.hero.greeting}</p>
         <h1>
-          Engenharia <span>Full Stack</span>
-          <br /> com foco em <span>infraestrutura</span> e confiabilidade.
+          {h1.before1}
+          <span>{h1.span1}</span>
+          {h1.after1}
+          <br />
+          {h1.before2}
+          <span>{h1.span2}</span>
+          {h1.after2}
         </h1>
         {!sobre ? (
           <>
             <Link href="/sobre-mim">
-              <p>Sobre mim</p>
+              <p>{t.hero.sobreMimBtn}</p>
               <svg
                 width="14"
                 height="14"
@@ -29,62 +40,34 @@ const Principal = ({ sobre }) => {
             <div className={styles.stats}>
               <div>
                 <strong>5+</strong>
-                <span>anos de experiência</span>
+                <span>{t.hero.stats[0]}</span>
               </div>
               <div>
                 <strong>20+</strong>
-                <span>projetos entregues</span>
+                <span>{t.hero.stats[1]}</span>
               </div>
               <div>
                 <strong>16+</strong>
-                <span>tecnologias</span>
+                <span>{t.hero.stats[2]}</span>
               </div>
             </div>
           </>
         ) : (
           <div>
-            <h2>Sobre mim</h2>
+            <h2>{bio.heading}</h2>
+
+            <p>{bio.p1}</p>
+
+            <p>{bio.p2}</p>
+
+            <p>{bio.p3}</p>
+
+            <p>{bio.p4}</p>
+
+            <p>{bio.p5}</p>
 
             <p>
-              Meu nome é <Link href="/">Hugo</Link>, sou desenvolvedor Full
-              Stack e atuo na criação de aplicações web que equilibram boa
-              experiência do usuário, qualidade de código e infraestrutura bem
-              estruturada. Ao longo da minha trajetória, desenvolvi tanto o lado
-              visual das aplicações quanto a parte técnica responsável pelo
-              funcionamento e operação dos sistemas.
-            </p>
-
-            <p>
-              Tenho experiência no desenvolvimento de interfaces modernas,
-              intuitivas e responsivas, sempre buscando unir boas práticas de
-              UI/UX com desempenho e organização do código. Essa base em design
-              me ajuda a pensar nas aplicações não apenas do ponto de vista
-              técnico, mas também na experiência real de quem utiliza o sistema.
-            </p>
-
-            <p>
-              No lado de engenharia, trabalho com tecnologias do ecossistema web
-              como PHP, Node.js e bancos de dados, participando da construção de
-              sistemas robustos e integrações entre diferentes plataformas.
-            </p>
-
-            <p>
-              Também tenho forte interesse por infraestrutura e operação de
-              aplicações, trabalhando com Docker, servidores Linux e ambientes
-              containerizados. Essa experiência me permite atuar não apenas no
-              desenvolvimento das aplicações, mas também na organização dos
-              ambientes de execução, deploy e manutenção dos sistemas.
-            </p>
-
-            <p>
-              Grande parte da minha experiência está ligada ao desenvolvimento
-              de e-commerces e plataformas digitais, principalmente utilizando
-              Magento, WooCommerce e WordPress, participando tanto da
-              implementação quanto da manutenção e evolução dessas soluções.
-            </p>
-
-            <p>
-              Atualmente atuo como desenvolvedor na{" "}
+              {bio.p6before}
               <a
                 target="_blank"
                 href="https://widecommerce.com.br/"
@@ -92,23 +75,13 @@ const Principal = ({ sobre }) => {
               >
                 <span>WideCommerce</span>
               </a>
-              , participando de projetos voltados para e-commerce e plataformas
-              digitais. Entre os clientes atendidos estão marcas como Dumond,
-              Kikos, Lightning Bolt, Catálogo Favorita, Redelease, Shopping
-              Eldorado, DetonaShop e diversos outros.
+              {bio.p6after}
             </p>
 
-            <p>
-              Sou formado em Análise e Desenvolvimento de Sistemas e sigo em
-              constante evolução profissional, estudando novas tecnologias
-              relacionadas a desenvolvimento, arquitetura de software,
-              infraestrutura e automação de ambientes.
-            </p>
+            <p>{bio.p7}</p>
 
             <p>
-              Ao longo da minha carreira também participei de diversos projetos
-              de sites e e-commerces, incluindo soluções personalizadas
-              desenvolvidas pela{" "}
+              {bio.p8before}
               <a
                 target="_blank"
                 href="https://www.hubsell.com.br/"
@@ -116,9 +89,7 @@ const Principal = ({ sobre }) => {
               >
                 <span>Hubsell</span>
               </a>
-              . Além do trabalho profissional, também desenvolvo projetos
-              pessoais e estudos voltados a novas tecnologias e melhorias na
-              forma de construir e operar aplicações web.
+              {bio.p8after}
             </p>
           </div>
         )}

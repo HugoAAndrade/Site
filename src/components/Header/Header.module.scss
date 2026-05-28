@@ -111,3 +111,40 @@
     height: 100vh;
   }
 }
+
+.langToggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--p-small);
+  margin: 0 0px 0 25px;
+
+  span {
+    opacity: 0.3;
+    color: var(--p-color);
+    user-select: none;
+  }
+
+  button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--p-color);
+    font-size: var(--p-small);
+    font-family: inherit;
+    padding: 2px 0;
+    opacity: 0.45;
+    transition:
+      opacity var(--transition),
+      color var(--transition);
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.langActive {
+  opacity: 1 !important;
+  color: var(--primary) !important;
+}

@@ -3,43 +3,12 @@ import "aos/dist/aos.css";
 import Aos from "aos";
 import { useEffect } from "react";
 import styles from "./Projetos.module.scss";
-
-const projetos = [
-  {
-    titulo: "Portfolio Pessoal",
-    descricao:
-      "Site de portfólio desenvolvido com Next.js, React e SCSS. Conta com modo dark/light, animações de scroll, carrossel de skills e design totalmente responsivo.",
-    tags: ["Next.js", "React", "SCSS", "Vercel"],
-    link: "/",
-    tipo: "Frontend",
-  },
-  {
-    titulo: "E-commerce Dumond",
-    descricao:
-      "Desenvolvimento e manutenção da plataforma de e-commerce da Dumond, com customizações de layout, integrações e otimizações de performance.",
-    tags: ["Magento", "PHP", "MySQL", "Docker"],
-    link: "https://www.dumond.com.br/",
-    tipo: "E-commerce",
-  },
-  {
-    titulo: "Ambiente Containerizado",
-    descricao:
-      "Configuração de ambientes Docker para múltiplos serviços: nginx, PHP-FPM, MySQL e Redis, com rotinas automatizadas de build e deploy via shell scripts.",
-    tags: ["Docker", "Linux", "Nginx", "Shell"],
-    link: null,
-    tipo: "DevOps",
-  },
-  {
-    titulo: "Shopping Eldorado",
-    descricao:
-      "Implementação e customização de plataforma digital para o Shopping Eldorado, com integrações personalizadas e otimização de UX.",
-    tags: ["WordPress", "WooCommerce", "PHP", "JavaScript"],
-    link: "https://www.shopeldorado.com.br/",
-    tipo: "E-commerce",
-  },
-];
+import { useLang } from "@/context/LanguageContext";
 
 const Projetos = () => {
+  const { t } = useLang();
+  const { heading, items } = t.projetos;
+
   useEffect(() => {
     Aos.init({ delay: 25, once: true, easing: "ease-in-out" });
   }, []);
@@ -48,10 +17,11 @@ const Projetos = () => {
     <section className={styles.projetos}>
       <div>
         <h2 data-aos="fade-up" data-aos-duration="800">
-          Projetos <span>selecionados</span>
+          {heading.before}
+          <span>{heading.span}</span>
         </h2>
         <div className={styles.grid}>
-          {projetos.map((projeto, index) => (
+          {items.map((projeto, index) => (
             <div
               key={index}
               className={styles.card}

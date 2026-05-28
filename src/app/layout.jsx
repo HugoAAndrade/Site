@@ -2,6 +2,7 @@ import "./globals.scss";
 import { Outfit } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import SmoothScroll from "@/components/SmoothScroll/SmoothScroll";
+import { LanguageProvider } from "@/context/LanguageContext";
 
 const outfit = Outfit({ subsets: ["latin"] });
 
@@ -40,6 +41,14 @@ export default function RootLayout({ children }) {
     requestAnimationFrame(function () {
       root.style.removeProperty("--transition");
     });
+
+    // Idioma: esconde o conteúdo até o React hidradar e aplicar o idioma correto
+    var lang = localStorage.getItem("lang");
+    if (lang === "en" || lang === "pt") {
+      root.setAttribute("data-lang", lang);
+    }
+    // A classe é removida pelo LanguageProvider após aplicar o idioma correto
+    root.classList.add("lang-init");
   } catch (e) {
     // Sem acesso ao localStorage (ex: modo privado restrito)
   }
@@ -48,9 +57,11 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className={outfit.className}>
-        <SmoothScroll />
-        {children}
-        <Analytics />
+        <LanguageProvider>
+          <SmoothScroll />
+          {children}
+          <Analytics />
+        </LanguageProvider>
       </body>
     </html>
   );

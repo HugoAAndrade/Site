@@ -3,9 +3,11 @@ import styles from "./Header.module.scss";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Social from "@/components/Social/Social";
+import { useLang } from "@/context/LanguageContext";
 
 const Header = ({ anchor }) => {
   const [toggle, setToggle] = useState(false);
+  const { lang, setLang } = useLang();
 
   const applyThemeClass = (theme) => {
     document.documentElement.classList.remove("dark", "light");
@@ -105,6 +107,21 @@ const Header = ({ anchor }) => {
         )}
 
         <Social />
+        <div className={styles.langToggle}>
+          <button
+            onClick={() => setLang("pt")}
+            className={lang === "pt" ? styles.langActive : ""}
+          >
+            PT
+          </button>
+          <span>|</span>
+          <button
+            onClick={() => setLang("en")}
+            className={lang === "en" ? styles.langActive : ""}
+          >
+            EN
+          </button>
+        </div>
         <input
           onChange={handleToggle}
           checked={toggle}

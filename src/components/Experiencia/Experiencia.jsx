@@ -3,41 +3,12 @@ import "aos/dist/aos.css";
 import Aos from "aos";
 import { useEffect } from "react";
 import styles from "./Experiencia.module.scss";
-
-const experiencias = [
-  {
-    empresa: "WideCommerce",
-    cargo: "Desenvolvedor Full Stack",
-    periodo: "2022 — presente",
-    descricao:
-      "Desenvolvimento e manutenção de e-commerces e plataformas digitais. Atuação com Magento, WooCommerce e WordPress, além de infraestrutura com Docker e Linux. Entre os clientes atendidos: Dumond, Kikos, Lightning Bolt, Redelease e Shopping Eldorado.",
-    tags: ["PHP", "Magento", "Node.js", "Docker", "Linux", "MySQL"],
-    link: "https://widecommerce.com.br/",
-    atual: true,
-  },
-  {
-    empresa: "Hubsell",
-    cargo: "Desenvolvedor Web",
-    periodo: "2021 — 2022",
-    descricao:
-      "Participação no desenvolvimento de sites e e-commerces personalizados, com foco em performance, usabilidade e experiência do usuário.",
-    tags: ["WordPress", "WooCommerce", "PHP", "JavaScript"],
-    link: "https://www.hubsell.com.br/",
-    atual: false,
-  },
-  {
-    empresa: "Análise e Desenvolvimento de Sistemas",
-    cargo: "Graduação",
-    periodo: "2020 — 2023",
-    descricao:
-      "Formação técnica com base em programação, banco de dados, redes de computadores e engenharia de software.",
-    tags: ["ADS", "Graduação"],
-    link: null,
-    atual: false,
-  },
-];
+import { useLang } from "@/context/LanguageContext";
 
 const Experiencia = () => {
+  const { t } = useLang();
+  const { heading, items } = t.experiencia;
+
   useEffect(() => {
     Aos.init({ delay: 25, once: true, easing: "ease-in-out" });
   }, []);
@@ -46,10 +17,11 @@ const Experiencia = () => {
     <section className={styles.experiencia}>
       <div>
         <h2 data-aos="fade-up" data-aos-duration="800">
-          Experiência <span>profissional</span>
+          {heading.before}
+          <span>{heading.span}</span>
         </h2>
         <div className={styles.timeline}>
-          {experiencias.map((exp, index) => (
+          {items.map((exp, index) => (
             <div
               key={index}
               className={styles.item}

@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Evita flash de idioma errado: o script inline adiciona esta classe
+   e o LanguageProvider remove após aplicar o idioma do localStorage */
+html.lang-init {
+  visibility: hidden;
+}
+
 :root {
   --transition: 0.3s ease-in-out 0s;
   --p-small: 14px;
